@@ -183,6 +183,10 @@
   .req-card h3{font-size:1.25rem;margin-bottom:8px}
   .req-card p{color:var(--mut);font-size:.95rem}
 
+  .map{margin-top:40px;display:grid;gap:14px;justify-items:start}
+  .map iframe{width:100%;height:340px;border:1px solid var(--line);border-radius:var(--r);filter:grayscale(.2)}
+  a.fact{color:inherit;transition:border-color .15s}
+  a.fact:hover{border-color:var(--acc)}
   footer{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:.88rem}
   footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
@@ -225,8 +229,8 @@
     </div>
     <div class="facts">
       <div class="fact"><small>Fechas</small><strong>14, 16 y 18 dic 2026</strong></div>
-      <div class="fact"><small>Formato</small><strong>3 días · mínimo 3 h al día</strong></div>
-      <div class="fact"><small>Lugar</small><strong>Talud de la Eria</strong></div>
+      <div class="fact"><small>Formato</small><strong>Presencial · 3 días · mín. 3 h al día</strong></div>
+      <a class="fact" href="https://www.google.com/maps/search/?api=1&query=Talud+de+la+Eria+Oviedo" target="_blank" rel="noopener" style="text-decoration:none"><small>Lugar · ver en Maps ↗</small><strong>Talud de la Eria, Oviedo</strong></a>
       <div class="fact"><small>Precio</small><strong>Gratis · con inscripción</strong></div>
     </div>
   </div>
@@ -302,7 +306,7 @@
   <div class="wrap">
     <span class="eyebrow">Programa</span>
     <h2>3 días y te vas con tu negocio digital montado</h2>
-    <p class="lead">Talud de la Eria · Mínimo 3 horas por sesión · Te enviaremos el horario exacto por email.</p>
+    <p class="lead">Presencial en el <a href="https://www.google.com/maps/search/?api=1&query=Talud+de+la+Eria+Oviedo" target="_blank" rel="noopener" style="color:var(--txt)">Talud de la Eria (Oviedo)</a> · Mínimo 3 horas por sesión · Te enviaremos el horario exacto por email.</p>
     <div class="days">
       <div class="day reveal">
         <div class="num">01</div>
@@ -342,6 +346,7 @@
         <div class="out"><b>Te llevas:</b> tu negocio digital montado y listo para funcionar.</div>
       </div>
     </div>
+    <div class="map reveal"><iframe title="Mapa: Talud de la Eria, Oviedo" src="https://www.google.com/maps?q=Talud+de+la+Eria,+Oviedo&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=Talud+de+la+Eria+Oviedo" target="_blank" rel="noopener">📍 Cómo llegar · Talud de la Eria, Oviedo</a></div>
   </div>
 </section>
 
@@ -453,7 +458,7 @@
       <div class="success" id="success">
         <div class="big">🎉</div>
         <h3>¡Plaza reservada!</h3>
-        <p>Te esperamos el <strong>14, 16 y 18 de diciembre</strong> en el <strong>Talud de la Eria</strong>.</p>
+        <p>Te esperamos el <strong>14, 16 y 18 de diciembre</strong> en el <strong>Talud de la Eria (Oviedo)</strong>.</p>
         <p>En breve recibirás un email con el horario y los detalles. Recuerda: portátil con Claude instalado y licencia activa, y acceso a tu Facebook.</p>
         <div class="cal">
           <a class="btn" id="ics" download="emprende-desde-casa.ics" href="#">Añadir a mi calendario</a>
@@ -593,7 +598,7 @@ form.addEventListener("submit", async e => {
   const ev = days.map((d,i) => [
     "BEGIN:VEVENT", `UID:emprende1829-${d}@formacion`, `DTSTAMP:20261104T000000Z`,
     `DTSTART;VALUE=DATE:${d}`, `SUMMARY:Emprende desde casa · Sesión ${i+1}`,
-    "LOCATION:Talud de la Eria", "DESCRIPTION:Formación práctica de emprendimiento. Trae tu portátil con Claude (licencia de pago) y acceso a tu Facebook.", "END:VEVENT"
+    "LOCATION:Talud de la Eria\\, Oviedo", "DESCRIPTION:Formación práctica de emprendimiento. Trae tu portátil con Claude (licencia de pago) y acceso a tu Facebook.", "END:VEVENT"
   ].join("\r\n")).join("\r\n");
   const ics = `BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Emprende desde casa//ES\r\n${ev}\r\nEND:VCALENDAR`;
   document.getElementById("ics").href = "data:text/calendar;charset=utf-8," + encodeURIComponent(ics);
