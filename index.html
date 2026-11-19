@@ -11,7 +11,7 @@
 <link rel="icon" href="img/logo-edc.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Saira:wght@500..900&family=Saira+Condensed:wght@600;700;800&family=Geist:wght@400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500..900&family=Inter:wght@400..700&family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --papel:#ffffff;
@@ -28,8 +28,8 @@
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-  body{font-family:Geist,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--papel);color:var(--tinta);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
-  h1,h2,h3{font-family:Saira,"Arial Black",sans-serif;line-height:1.05;letter-spacing:-.01em;font-weight:800}
+  body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--papel);color:var(--tinta);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Inter Tight",Inter,sans-serif;line-height:1.02;letter-spacing:-.035em;font-weight:800}
   a{color:var(--prado)}
   a:hover{color:var(--prado-osc)}
   :focus-visible{outline:3px solid var(--prado);outline-offset:3px;border-radius:4px}
@@ -46,7 +46,7 @@
   /* NAV */
   nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--linea)}
   nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:20px}
-  .logo{display:inline-flex;align-items:center;gap:10px;color:var(--tinta);text-decoration:none;white-space:nowrap}.logo svg{width:38px;height:38px;flex:none}.logo .lt{display:flex;flex-direction:column;line-height:.9}.logo .lt b{font-family:Saira;font-weight:900;font-size:1.22rem;text-transform:uppercase;letter-spacing:.01em}.logo .lt span{font-family:"Saira Condensed";font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:.2em;color:var(--prado)}
+  .logo{display:inline-flex;align-items:center;gap:10px;color:var(--tinta);text-decoration:none;white-space:nowrap}.logo svg{width:38px;height:38px;flex:none}.logo .lt{display:flex;flex-direction:column;line-height:1;gap:1px}.logo .lt b{font-family:"Inter Tight";font-weight:900;font-size:1.4rem;letter-spacing:-.045em;line-height:1}.logo .lt span{font-family:"Barlow Semi Condensed";font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:.2em;color:var(--prado)}
   .logo:hover{color:var(--tinta)}
   nav .links{display:flex;gap:26px;align-items:center}
   nav .links a:not(.btn){color:var(--pizarra);text-decoration:none;font-size:.95rem;font-weight:500}
@@ -61,7 +61,7 @@
   @media(max-width:920px){.hero .wrap{grid-template-columns:1fr;gap:44px}}
   .kicker{color:var(--pizarra);font-weight:500;margin-bottom:22px}
   .kicker strong{color:var(--tinta)}
-  .hero h1{font-size:clamp(2.3rem,5vw,4rem);font-weight:800;text-transform:uppercase;letter-spacing:0;line-height:.98;max-width:17ch}
+  .hero h1{font-size:clamp(2.7rem,6vw,4.9rem);font-weight:900;letter-spacing:-.04em;word-spacing:.06em;line-height:.98;max-width:14ch}
   .hero .intro{margin:24px 0 32px;font-size:1.15rem}
   .ctas{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
   .org-line{display:flex;align-items:center;gap:14px;margin-top:40px;padding-top:24px;border-top:1px solid var(--linea);color:var(--pizarra);font-size:.92rem}
@@ -72,8 +72,8 @@
   .agenda h2{font-size:1.15rem;font-weight:600;color:#c9d8cf;margin-bottom:8px;max-width:none;letter-spacing:0}
   .agenda ol{list-style:none}
   .agenda li{display:grid;grid-template-columns:82px 1fr;gap:18px;align-items:center;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.14)}
-  .agenda .d{font-family:Saira;font-weight:800;font-size:3.4rem;line-height:1;letter-spacing:-.04em}
-  .agenda .d small{display:block;font-family:"Saira Condensed";text-transform:uppercase;letter-spacing:.04em;font-size:.85rem;font-weight:600;letter-spacing:0;color:#9fb8aa;margin-top:6px}
+  .agenda .d{font-family:"Inter Tight";font-weight:900;font-weight:800;font-size:3.4rem;line-height:1;letter-spacing:-.04em}
+  .agenda .d small{display:block;font-family:"Barlow Semi Condensed";text-transform:uppercase;letter-spacing:.04em;font-size:.85rem;font-weight:600;letter-spacing:0;color:#9fb8aa;margin-top:6px}
   .agenda .t{font-weight:600;font-size:1.05rem;line-height:1.35}
   .agenda .t span{display:block;font-weight:400;color:#c9d8cf;font-size:.92rem;margin-top:2px}
   .agenda .place{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-top:18px;font-size:.95rem;color:#c9d8cf;flex-wrap:wrap}
@@ -105,9 +105,9 @@
   .days{margin-top:44px;border-top:2px solid var(--tinta)}
   .day{display:grid;grid-template-columns:160px 1fr;gap:40px;padding:34px 0;border-bottom:1px solid var(--linea)}
   @media(max-width:760px){.day{grid-template-columns:1fr;gap:12px}}
-  .day .when{font-family:Saira}
+  .day .when{font-family:"Inter Tight"}
   .day .when b{display:block;font-size:3.6rem;font-weight:800;line-height:1;letter-spacing:-.03em}
-  .day .when span{color:var(--pizarra);font-family:"Saira Condensed";font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:.95rem}
+  .day .when span{color:var(--pizarra);font-family:"Barlow Semi Condensed";font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:.95rem}
   .day h3{font-size:1.45rem;margin-bottom:12px}
   .day ul{padding-left:20px;display:grid;gap:6px;color:#2b3a34}
   .day li::marker{color:var(--prado)}
@@ -202,7 +202,7 @@
 
 <nav>
   <div class="wrap">
-    <a href="#" class="logo" aria-label="Emprende desde casa, inicio"><svg aria-hidden="true" viewBox="0 0 48 48"><rect width="48" height="48" rx="11" fill="#2f7d4f"/><path d="M9 22.5 24 10l15 12.5" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="14" y="21" width="20" height="13" rx="2" fill="none" stroke="#fff" stroke-width="3.2"/><path d="M10 37.5h28" stroke="#fff" stroke-width="3.6" stroke-linecap="round"/><path d="m21.5 25.2 5 2.8-5 2.8z" fill="#c8f06a"/></svg><span class="lt"><b>Emprende</b><span>desde casa</span></span></a>
+    <a href="#" class="logo" aria-label="Emprende desde casa, inicio"><svg aria-hidden="true" viewBox="0 0 48 48"><rect width="48" height="48" rx="11" fill="#2f7d4f"/><path d="M9 22.5 24 10l15 12.5" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="14" y="21" width="20" height="13" rx="2" fill="none" stroke="#fff" stroke-width="3.2"/><path d="M10 37.5h28" stroke="#fff" stroke-width="3.6" stroke-linecap="round"/><path d="m21.5 25.2 5 2.8-5 2.8z" fill="#c8f06a"/></svg><span class="lt"><b>emprende</b><span>desde casa</span></span></a>
     <div class="links">
       <a href="#caminos">Para quién es</a>
       <a href="#programa">Programa</a>
