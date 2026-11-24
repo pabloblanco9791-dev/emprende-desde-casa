@@ -194,6 +194,11 @@
   @media(max-width:820px){.partners .wrap{grid-template-columns:1fr;gap:28px}}
   .partners p{font-size:.88rem;color:var(--pizarra);margin-bottom:10px;font-weight:600}
   .partners .org img{max-width:170px}
+  .fin{list-style:none;display:flex;flex-wrap:wrap;align-items:center;gap:26px 44px;margin:6px 0 0;padding:0}
+  .fin li{display:flex;align-items:center}
+  .fin img{display:block;width:auto;max-width:100%}
+  .fin .h-ue{height:50px}.fin .h-mi{height:52px}.fin .h-fe{height:50px}.fin .h-fse{height:42px}.fin .h-ov{height:40px}.fin .h-pa{height:72px}
+  @media(max-width:560px){.fin{gap:22px 28px}.fin .h-ue,.fin .h-mi,.fin .h-fe{height:40px}.fin .h-fse{height:34px}.fin .h-ov{height:32px}.fin .h-pa{height:60px}}
 
   footer{background:var(--tinta);color:#c9d8cf;padding:36px 0;font-size:.9rem}
   footer .wrap{display:grid;grid-template-columns:1fr 1.4fr;gap:28px}
@@ -501,15 +506,22 @@
   </div>
 </section>
 
-<section class="partners" aria-label="Organiza y financia">
+<section class="partners" aria-label="Organiza, financia y cofinancia">
   <div class="wrap">
     <div class="org">
       <p>Organiza</p>
       <img src="img/logo-ach.jpg" alt="Fundación Acción contra el Hambre" loading="lazy">
     </div>
     <div>
-      <p>Financian</p>
-      <img src="img/logos-financiadores.png" alt="Cofinanciado por la Unión Europea, Ministerio de Trabajo y Economía Social, Fondos Europeos, Fondo Social Europeo Plus, Ayuntamiento de Oviedo y Gobierno del Principado de Asturias" loading="lazy">
+      <p>Financian y cofinancian</p>
+      <ul class="fin">
+        <li><img src="img/financiadores/ue-cofinanciado.svg" alt="Cofinanciado por la Unión Europea" class="h-ue" loading="lazy"></li>
+        <li><img src="img/financiadores/ministerio.png" alt="Ministerio de Trabajo y Economía Social" class="h-mi" loading="lazy"></li>
+        <li><img src="img/financiadores/fondos-europeos.svg" alt="Fondos Europeos" class="h-fe" loading="lazy"></li>
+        <li><img src="img/financiadores/fse.png" alt="FSE+ Fondo Social Europeo Plus" class="h-fse" loading="lazy"></li>
+        <li><img src="img/financiadores/oviedo.png" alt="Ayuntamiento de Oviedo" class="h-ov" loading="lazy"></li>
+        <li><img src="img/financiadores/principado.png" alt="Gobierno del Principado de Asturias, Consejería de Servicios y Derechos Sociales. Por solidaridad, otros fines de interés social" class="h-pa" loading="lazy"></li>
+      </ul>
     </div>
   </div>
 </section>
