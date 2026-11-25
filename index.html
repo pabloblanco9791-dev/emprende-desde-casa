@@ -512,9 +512,9 @@
       </form>
 
       <div class="success" id="success">
-        <h3>Plaza reservada</h3>
-        <p>Te esperamos el <strong>14, 16 y 18 de diciembre, de 9:00 a 14:00</strong>, en el <strong>Talud de la Eria (Oviedo)</strong>.</p>
-        <p>Recibirás un email con todos los detalles. Recuerda traer tu portátil con Claude instalado y la licencia activa, y tener a mano tu cuenta de Facebook.</p>
+        <h3>Solicitud recibida</h3>
+        <p>Tu plaza queda <strong>pendiente de confirmación</strong>. Revisaremos tu solicitud y te escribiremos para confirmártela.</p>
+        <p>El taller es el <strong>14, 16 y 18 de diciembre, de 9:00 a 14:00</strong>, en el <strong>Talud de la Eria (Oviedo)</strong>. Recuerda traer tu portátil con Claude instalado y la licencia activa, y tener a mano tu cuenta de Facebook.</p>
         <div class="cal">
           <a class="btn" id="ics" download="emprende-desde-casa.ics" href="#">Añadir a mi calendario</a>
           <a class="link" id="share" href="#">Compartir por WhatsApp</a>
@@ -637,7 +637,7 @@ form.addEventListener("submit", async e => {
     } else {
       const res = await fetch(ENDPOINT, {method:"POST", body: JSON.stringify(data)});
       const out = await res.json();
-      if (out.result === "duplicate") throw new Error("Este email ya está inscrito: ya tienes tu plaza.");
+      if (out.result === "duplicate") throw new Error("Este email ya tiene una solicitud registrada. Te escribiremos para confirmarte la plaza.");
       if (out.result === "full") throw new Error("Ya no quedan plazas. Escríbenos a hola@pablinblanco.com para entrar en la lista de espera.");
       if (out.result !== "ok") throw new Error("generic");
     }
